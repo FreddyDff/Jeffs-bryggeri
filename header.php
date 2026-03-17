@@ -25,8 +25,9 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'jeffs-bryggeri' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
+	<header id="masthead" class="site-header header">
+		<div class="header__inner container">
+			<div class="site-branding">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
@@ -44,6 +45,11 @@
 				<p class="site-description"><?php echo $jeffs_bryggeri_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
+		<div class="header__actions">
+		<a href="/cart/" class="header__cart">Varukorg</a>
+		<a href="/checkout/" class="header__checkout">Kassa</a>
+		<a href="/my-account/" class="header__account">Mitt Konto</a>
+		</div>
 
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'jeffs-bryggeri' ); ?></button>
@@ -56,4 +62,5 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+		</div>
 	</header><!-- #masthead -->
