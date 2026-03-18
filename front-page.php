@@ -16,6 +16,8 @@ get_header();
         <div class="hero__inner">
             <h1 class="hero__title">Jeffs Bryggeri</h1>
             <!-- Hero background image can be added via CSS or here -->
+            <img src="<?php echo esc_url( get_template_directory_uri() . '/images/hero.png' ); ?>" alt="Jeffs Bryggeri" class="hero__image">
+
         </div>
     </section>
 
@@ -32,11 +34,17 @@ get_header();
     <!-- Image gallery / feature section (circular images) -->
     <section class="image-gallery">
         <div class="container">
-            <div class="image-gallery__grid">
-                <div class="image-gallery__item">Image 1</div>
-                <div class="image-gallery__item">Image 2</div>
-                <div class="image-gallery__item">Image 3</div>
-            </div>
+        <div class="image-gallery__grid">
+    <div class="image-gallery__item">
+        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/circle-1.png' ); ?>" alt="Bild 1">
+    </div>
+    <div class="image-gallery__item">
+        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/circle-2.png' ); ?>" alt="Bild 2">
+    </div>
+    <div class="image-gallery__item">
+        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/circle-3.png' ); ?>" alt="Bild 3">
+    </div>
+</div>
         </div>
     </section>
 
@@ -80,9 +88,9 @@ get_header();
     <!-- Extra image section (beer glasses etc.) -->
     <section class="image-section">
         <div class="container">
-            <div class="image-section__content">
-                <p>Placeholder for image section.</p>
-            </div>
+        <div class="image-section__content">
+    <img src="<?php echo esc_url( get_template_directory_uri() . '/images/bottom-image.png' ); ?>" alt="Ölbild">
+</div>
         </div>
     </section>
 

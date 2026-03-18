@@ -48,7 +48,6 @@
 		<div class="header__actions">
 		<a href="/cart/" class="header__cart">Varukorg</a>
 		<a href="/checkout/" class="header__checkout">Kassa</a>
-		<a href="/my-account/" class="header__account">Mitt Konto</a>
 		</div>
 
 		<nav id="site-navigation" class="main-navigation">
