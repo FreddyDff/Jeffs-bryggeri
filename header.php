@@ -30,17 +30,13 @@
 			<div class="site-branding">
 			<?php
 			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
+			if ( ! is_front_page() ) :
 				?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
 			$jeffs_bryggeri_description = get_bloginfo( 'description', 'display' );
-			if ( $jeffs_bryggeri_description || is_customize_preview() ) :
+			if ( ! is_front_page() && ( $jeffs_bryggeri_description || is_customize_preview() ) ) :
 				?>
 				<p class="site-description"><?php echo $jeffs_bryggeri_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>

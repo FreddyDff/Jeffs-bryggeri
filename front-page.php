@@ -7,17 +7,23 @@
  */
 
 get_header();
+
+$hero_tagline = get_bloginfo( 'description', 'display' );
+if ( ! is_string( $hero_tagline ) || '' === trim( wp_strip_all_tags( $hero_tagline ) ) ) {
+	$hero_tagline = __( 'Microbryggeri med känsla för det lilla extra', 'jeffs-bryggeri' );
+}
 ?>
 
 <main id="primary" class="site-main front-page">
 
-    <!-- Hero -->
+    <!-- Hero: text ligger i .hero__overlay (stylas med CSS ovanpå bilden) -->
     <section class="hero">
         <div class="hero__inner">
-            <h1 class="hero__title">Jeffs Bryggeri</h1>
-            <!-- Hero background image can be added via CSS or here -->
-            <img src="<?php echo esc_url( get_template_directory_uri() . '/images/hero.png' ); ?>" alt="Jeffs Bryggeri" class="hero__image">
-
+            <img src="<?php echo esc_url( get_template_directory_uri() . '/images/hero.png' ); ?>" alt="" class="hero__image" loading="eager">
+            <div class="hero__overlay">
+                <h1 class="hero__title"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h1>
+                <p class="hero__tagline"><?php echo esc_html( $hero_tagline ); ?></p>
+            </div>
         </div>
     </section>
 
@@ -26,7 +32,8 @@ get_header();
         <div class="container">
             <h2 class="section-title">Info om oss</h2>
             <div class="info-om-oss__content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam turpis orci, semper non consectetur id, placerat sit amet tellus. Integer efficitur cursus condimentum. Integer in porta justo. Praesent consequat posuere tristique. Integer non lectus sem</p>
+                <p>Jeffs Bryggeri startade som ett garageprojekt med ett enkelt löfte: öl som smakar mer än etiketten lovar. I dag brygger vi i små satser med fokus på rena råvaror, tydlig beska och balanserad sötma – alltid med respekt för hantverket och grannarna som får stå ut med lite extra humleluft på fredagar.</p>
+                <p>Hos oss möts klassiska stilar och egna experiment. Kom förbi taproom när vi har öppet, eller handla hemma i webbshoppen. Vi ses i glaset.</p>
             </div>
         </div>
     </section>
@@ -51,7 +58,8 @@ get_header();
     <!-- Webshop product grid -->
     <section class="product-grid-section">
         <div class="container">
-            <h2 class="section-title">Webshop</h2>
+            <h2 class="section-title"><?php esc_html_e( 'Handla i vår webshop', 'jeffs-bryggeri' ); ?></h2>
+            <p class="product-grid-section__intro"><?php esc_html_e( 'Här hittar du våra senaste batcher – från lättdruckna lager till humliga favoriter. Allt bryggt i små volymer med samma omsorg som i provläget. Klicka in på en produkt för mer smaknoter och ingredienser.', 'jeffs-bryggeri' ); ?></p>
             <ul class="product-grid">
                 <?php
                 if (class_exists('WooCommerce')) {
@@ -75,6 +83,7 @@ get_header();
                             </h3>
                             <p class="product-card__price"><?php echo $product->get_price_html(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
                                                             ?></p>
+                            <a href="<?php echo esc_url( $product->get_permalink() ); ?>" class="product-card__read-more"><?php esc_html_e( 'Läs mer', 'jeffs-bryggeri' ); ?></a>
                             <?php woocommerce_template_loop_add_to_cart(); ?>
                         </li>
                 <?php

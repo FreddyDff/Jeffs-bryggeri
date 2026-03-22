@@ -969,7 +969,53 @@ textarea {
 }
 
 /* --------------------------------------------------
-# Custom
+# Custom — startsida (grund för design; bygg vidare i samma fil)
 -------------------------------------------------- */
+
+/* Hero: overlay ovanpå bild (kollegan kan justera färger, typografi, skuggor) */
+.hero__inner {
+	position: relative;
+	overflow: hidden;
+}
+
+.hero__image {
+	display: block;
+	width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+.hero__overlay {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 1.5rem;
+	box-sizing: border-box;
+}
+
+.hero__title,
+.hero__tagline {
+	margin: 0;
+	color: #fff;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.hero__tagline {
+	margin-top: 0.75rem;
+	font-size: clamp(1rem, 2.5vw, 1.25rem);
+	font-weight: 400;
+	max-width: 36em;
+}
+
+/* Webshop-sektion: intro under rubrik */
+.product-grid-section__intro {
+	margin: 0 auto 1.5rem;
+	max-width: 42em;
+	text-align: center;
+}
 
 
