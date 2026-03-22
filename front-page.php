@@ -12,17 +12,28 @@ $hero_tagline = get_bloginfo( 'description', 'display' );
 if ( ! is_string( $hero_tagline ) || '' === trim( wp_strip_all_tags( $hero_tagline ) ) ) {
 	$hero_tagline = __( 'Microbryggeri med känsla för det lilla extra', 'jeffs-bryggeri' );
 }
+
+/*
+ * Om hero.png redan har rubrik/tagline i själva bilden (vanlig designexport) ska samma text
+ * inte skrivas ut synligt här — då blir det "text på text". Sätt då false.
+ * Byt till true om ni använder en ren fotobakgrund utan text i bilden (då stylas overlay i CSS).
+ */
+$hero_show_visible_text_overlay = false;
 ?>
 
 <main id="primary" class="site-main front-page">
 
-    <!-- Hero: text ligger i .hero__overlay (stylas med CSS ovanpå bilden) -->
+    <!-- Hero: vid inbränd text i bilden används screen-reader-text (SEO/a11y utan dubbel visuell text) -->
     <section class="hero">
         <div class="hero__inner">
             <img src="<?php echo esc_url( get_template_directory_uri() . '/images/hero.png' ); ?>" alt="" class="hero__image" loading="eager">
             <div class="hero__overlay">
-                <h1 class="hero__title"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h1>
-                <p class="hero__tagline"><?php echo esc_html( $hero_tagline ); ?></p>
+				<?php
+				$hero_title_class = 'hero__title' . ( $hero_show_visible_text_overlay ? '' : ' screen-reader-text' );
+				$hero_tagline_class = 'hero__tagline' . ( $hero_show_visible_text_overlay ? '' : ' screen-reader-text' );
+				?>
+                <h1 class="<?php echo esc_attr( $hero_title_class ); ?>"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h1>
+                <p class="<?php echo esc_attr( $hero_tagline_class ); ?>"><?php echo esc_html( $hero_tagline ); ?></p>
             </div>
         </div>
     </section>
