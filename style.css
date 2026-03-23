@@ -652,6 +652,31 @@ textarea {
 	width: 100%;
 }
 
+/* Mobile hamburger icon (replaces default "Primary Menu" text). */
+.menu-toggle {
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	font-size: 0; /* hide button label */
+	line-height: 0;
+	padding: 0;
+	position: relative;
+	width: 44px;
+	height: 44px;
+}
+
+.menu-toggle::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 16px;
+	width: 22px;
+	height: 2px;
+	background: #e8941c; /* orange/amber */
+	transform: translateX(-50%);
+	box-shadow: 0 8px 0 #e8941c, 0 16px 0 #e8941c;
+}
+
 .main-navigation ul {
 	display: none;
 	list-style: none;
@@ -711,6 +736,25 @@ textarea {
 
 	.main-navigation ul {
 		display: flex;
+	}
+}
+
+/* Mobile dropdown styling for the toggled menu. */
+@media screen and (max-width: 37.5em) {
+	/* On mobile: we show cart/checkout inside the hamburger menu instead. */
+	.header__actions {
+		display: none;
+	}
+
+	.main-navigation.toggled ul {
+		background: rgba(0, 0, 0, 0.85);
+		padding: 0.75rem 1rem;
+		border-radius: 10px;
+		margin-top: 0.5rem;
+	}
+
+	.main-navigation.toggled ul a {
+		color: #fff;
 	}
 }
 
