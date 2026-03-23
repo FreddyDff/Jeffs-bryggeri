@@ -44,7 +44,7 @@ $hero_show_visible_text_overlay = false;
             <h2 class="section-title">Info om oss</h2>
             <div class="info-om-oss__content">
                 <p>Jeffs Bryggeri startade som ett garageprojekt med ett enkelt löfte: öl som smakar mer än etiketten lovar. I dag brygger vi i små satser med fokus på rena råvaror, tydlig beska och balanserad sötma – alltid med respekt för hantverket och grannarna som får stå ut med lite extra humleluft på fredagar.</p>
-                <p>Hos oss möts klassiska stilar och egna experiment. Kom förbi taproom när vi har öppet, eller handla hemma i webbshoppen. Vi ses i glaset.</p>
+                <p>Hos oss möts klassiska stilar och egna experiment. Kom förbi taproom när vi har öppet så passa på, eller handla hemma i webbshoppen. Vi ses i glaset.</p>
             </div>
         </div>
     </section>
