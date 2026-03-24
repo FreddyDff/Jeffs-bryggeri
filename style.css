@@ -1017,7 +1017,7 @@ textarea {
 -------------------------------------------------- */
 
 /* Hero: overlay ovanpå bild (kollegan kan justera färger, typografi, skuggor) */
-.hero__inner {
+/* .hero__inner {
 	position: relative;
 	overflow: hidden;
 }
@@ -1056,10 +1056,256 @@ textarea {
 }
 
 /* Webshop-sektion: intro under rubrik */
-.product-grid-section__intro {
+/* .product-grid-section__intro {
 	margin: 0 auto 1.5rem;
 	max-width: 42em;
 	text-align: center;
+} */
+
+/* Header */
+
+.site-header.header {
+    background-color: #0b0b0b;
+    padding: 10px 0;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+.site-branding {
+    display: flex;
+    align-items: center;
+}
+
+.site-branding img {
+    max-height: 40px;
+    width: auto;
+}
+
+
+.site-title,
+.site-description {
+    display: none;
+}
+
+/* Navigation */
+.main-navigation {
+    margin-left: 30px;
+    width: auto;
+}
+
+
+.header__actions {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
+/* Header Buttons */
+.header__actions a {
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+/* Cart Button */
+.header__cart {
+    background-color: #2b2b2b;
+    color: #fff;
+}
+
+/* Checkout Button */
+.header__checkout {
+    background-color: #f4a300;
+    color: #000;
+}
+
+
+.header__cart:hover {
+    background-color: #3a3a3a;
+}
+
+.header__checkout:hover {
+    background-color: #ffb733;
+}
+
+/* Footer */
+
+.site-footer {
+    background-color: #000;
+    padding: 60px 20px;
+    height: 145px;
+    text-align: center;
+	bottom: 0;
+}
+
+/* Center and style the text */
+.site-footer .site-info {
+    color: #ccc;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* Style links (WordPress + theme text) */
+.site-footer .site-info a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.site-footer .sep {
+    display: none;
+}
+
+/* Front-page */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1E1E1E;
+    color: #fff;
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay text */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+/* Title + subtitle overlay */
+.hero__inner::before {
+    white-space: pre;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    text-align: center;
+    color: #fff;
+
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+/* ================= INFO SECTION ================= */
+.info-om-oss {
+    background: #1c1c1c;
+    padding: 60px 20px 30px;
+    text-align: center;
+}
+
+.section-title {
+    color: #f39c12;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.info-om-oss__content p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* ================= IMAGE GALLERY ================= */
+.image-gallery {
+    background: #1c1c1c;
+    padding: 40px 0 60px;
+}
+
+.image-gallery__grid {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.image-gallery__item img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* ================= WEBSHOP ================= */
+.product-grid-section {
+    background: #1c1c1c;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.product-grid {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.product-card__title a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.product-card__price {
+    color: #f39c12;
+}
+
+/* ================= BOTTOM IMAGE ================= */
+.image-section {
+    background: #1c1c1c;
+    padding: 40px 0;
+}
+
+.image-section__content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+    background: #000;
+    padding: 40px;
+    text-align: center;
+}
+
+.site-footer .site-info {
+    color: #ccc;
 }
 
 
