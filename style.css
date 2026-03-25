@@ -721,10 +721,12 @@ textarea {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
-	background-color: red;
-	color: white;
+	background-color:#D9D9D9;
+	color: black;
 	padding: 0.5em .75em;
 	border-radius: 4px;
+	margin-right: 12px;
+	hover:#E18E10;
 }
 
 /* Small menu. */
