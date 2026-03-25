@@ -40,11 +40,7 @@
 				?>
 				<p class="site-description"><?php echo $jeffs_bryggeri_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
-		</div><!-- .site-branding -->
-		<div class="header__actions">
-		<a href="/cart/" class="header__cart">Varukorg</a>
-		<a href="/checkout/" class="header__checkout">Kassa</a>
-		</div>
+		
 
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'jeffs-bryggeri' ); ?></button>
