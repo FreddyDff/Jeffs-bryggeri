@@ -726,7 +726,17 @@ textarea {
 	padding: 0.5em .75em;
 	border-radius: 4px;
 	margin-right: 12px;
-	hover:#E18E10;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.main-navigation a:hover 
+{
+	background-color: #e8941c;
+}
+
+.main-navigation a:active {
+	background-color: #e8941c;
 }
 
 /* Small menu. */
