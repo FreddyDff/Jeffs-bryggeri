@@ -1,10 +1,10 @@
 <?php
 /**
- * Jeffs Bryggeri functions and definitions
+ * jeffs bryggeri functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Jeffs_Bryggeri
+ * @package jeffs_bryggeri
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -23,7 +23,7 @@ function jeffs_bryggeri_setup() {
 	/*
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on Jeffs Bryggeri, use a find and replace
+		* If you're building a theme based on jeffs bryggeri, use a find and replace
 		* to change 'jeffs-bryggeri' to the name of your theme in all the template files.
 		*/
 	load_theme_textdomain( 'jeffs-bryggeri', get_template_directory() . '/languages' );
@@ -176,3 +176,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Load WooCommerce compatibility file.
+ */
+if ( class_exists( 'WooCommerce' ) ) {
+	require get_template_directory() . '/inc/woocommerce.php';
+}
