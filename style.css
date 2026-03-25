@@ -678,10 +678,11 @@ textarea {
 }
 
 .main-navigation ul {
-	display: none;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	display: flex;
+	justify-content: flex-end;
 }
 
 .main-navigation ul ul {
@@ -1091,9 +1092,9 @@ textarea {
 .site-branding img {
     max-height: 120px;
     width: auto;
-		position: absolute;
-		left: 0;
-		top: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 
@@ -1326,3 +1327,34 @@ body {
 	width: 90%;
 	margin: 0 auto;
 }
+
+
+h2 {
+color: #e18e1c;
+
+}
+
+p {
+	font-family: albert-sans, sans-serif;
+	
+}
+
+p.has-text-align-center {
+	padding-bottom: 32px;
+
+}
+
+img.wp-image-128, img.wp-image-129, img.wp-image-130, img.wp-image-151 {
+max-width: 380px;
+max-height: 380px;
+border-radius: 50%;
+padding: 28px;
+
+}
+
+div.wp-block-column.is-layout-flow.wp-block-column-is-layout-flow {
+	content: center;
+	justify-content: center;
+
+}
+
