@@ -721,13 +721,14 @@ textarea {
 }
 
 .main-navigation a {
-	display: block;
+	display: flex;
+	align-items: center;
 	text-decoration: none;
 	background-color:#D9D9D9;
 	color: black;
-	padding: 0.5em .75em;
+	padding: .5em .75em;
 	border-radius: 4px;
-	margin-right: 12px;
+	margin-right: 8px;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
 }
@@ -1090,19 +1091,18 @@ textarea {
 .header__inner {
     display: flex;
     align-items: center;
-    width: 100%;
 }
 
 
 .site-branding {
-		width: 100%;
+	width: 100%;
     display: flex;
     align-items: center;
-		justify-content: space-between;
 		position: relative;
 }
 
 .site-branding img {
+	
     max-height: 120px;
     width: auto;
 	position: absolute;
@@ -1118,8 +1118,8 @@ textarea {
 
 /* Navigation */
 .main-navigation {
-    margin-left: 30px;
-    width: auto;
+    margin-left: auto;
+    width: 100%;
 }
 
 
@@ -1387,15 +1387,30 @@ div.wp-block-column.is-layout-flow.wp-block-column-is-layout-flow {
 }
 
 .hero-banner h1 {
+	position: relative;
 	color: #fff; 
-	font-size: 96px;
+	font-size: 90px;
 	font-weight: 300;
-	line-height: 1.4;
+	line-height: 3.4;
 	text-align: center;
 	margin: 0;
 	padding: 0;
-	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.hero-banner h3 {
+position: relative;
+	color: #fff; 
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 0;
+	text-align: center;
+	
+
+}
+
+custom-logo {
+	
 }
