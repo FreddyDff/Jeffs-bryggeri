@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The header for our theme
  *
@@ -12,8 +13,9 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
+
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
@@ -21,37 +23,44 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'jeffs-bryggeri' ); ?></a>
+	<?php wp_body_open(); ?>
+	<div id="page" class="site">
+		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'jeffs-bryggeri'); ?></a>
 
-	<header id="masthead" class="site-header header">
-		<div class="header__inner container">
-			<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( ! is_front_page() ) :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$jeffs_bryggeri_description = get_bloginfo( 'description', 'display' );
-			if ( ! is_front_page() && ( $jeffs_bryggeri_description || is_customize_preview() ) ) :
-				?>
-				<p class="site-description"><?php echo $jeffs_bryggeri_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		
+		<header id="masthead" class="site-header header">
+			<div class="header__inner container">
+				<div class="site-branding">
+					<?php
+					the_custom_logo();
+					if (! is_front_page()) :
+					?>
+						<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
+					<?php
+					endif;
+					$jeffs_bryggeri_description = get_bloginfo('description', 'display');
+					if (! is_front_page() && ($jeffs_bryggeri_description || is_customize_preview())) :
+					?>
+						<p class="site-description"><?php echo $jeffs_bryggeri_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+																				?></p>
+					<?php endif; ?>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'jeffs-bryggeri' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-		</div>
-	</header><!-- #masthead -->
+
+					<nav id="site-navigation" class="main-navigation">
+						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'jeffs-bryggeri'); ?></button>
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'menu-1',
+								'menu_id'        => 'primary-menu',
+							)
+						);
+						?>
+					</nav><!-- #site-navigation -->
+				</div>
+		</header><!-- #masthead -->
+		<?php if (get_header_image()) : ?>
+			<div class="hero-banner" style="background-image: url('<?php header_image(); ?>');">
+				<h1><?php bloginfo('name'); ?></h1>
+				<h3><?php bloginfo('description'); ?></h3>
+			</div>
+		<?php endif; ?>
