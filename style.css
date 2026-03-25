@@ -720,6 +720,10 @@ textarea {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	background-color: red;
+	color: white;
+	padding: 0.5em .75em;
+	border-radius: 4px;
 }
 
 /* Small menu. */
@@ -1077,13 +1081,19 @@ textarea {
 
 
 .site-branding {
+		width: 100%;
     display: flex;
     align-items: center;
+		justify-content: space-between;
+		position: relative;
 }
 
 .site-branding img {
-    max-height: 40px;
+    max-height: 120px;
     width: auto;
+		position: absolute;
+		left: 0;
+		top: 0;
 }
 
 
@@ -1174,9 +1184,10 @@ body {
 
 /* Container */
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
+		width: 90%;
     margin: 0 auto;
-    padding: 0 20px;
+    /* padding: 0 20px; */
 }
 
 /* ================= HERO ================= */
