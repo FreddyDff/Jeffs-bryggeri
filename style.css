@@ -726,13 +726,11 @@ textarea {
 	padding: 0.5em .75em;
 	border-radius: 4px;
 	margin-right: 12px;
-}
 	cursor: pointer;
 	transition: background-color 0.3s ease;
 }
 
-.main-navigation a:hover 
-{
+.main-navigation a:hover {
 	background-color: #e8941c;
 }
 
