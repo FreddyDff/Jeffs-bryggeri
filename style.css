@@ -1376,3 +1376,10 @@ div.wp-block-column.is-layout-flow.wp-block-column-is-layout-flow {
 
 }
 
+/* Woocommerce */
+
+.wc-block-product {
+	background-color: #e18e1c;
+	border: 10px solid #e18e1c;
+	border-radius: 4px;
+}
