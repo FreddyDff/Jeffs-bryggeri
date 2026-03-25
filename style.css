@@ -93,7 +93,8 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-	font-size: 2em;
+	font-size: 3em;
+	text-align: center;
 	margin: 0.67em 0;
 }
 
@@ -415,6 +416,7 @@ h4,
 h5,
 h6 {
 	clear: both;
+	
 }
 
 p {
@@ -1382,4 +1384,18 @@ div.wp-block-column.is-layout-flow.wp-block-column-is-layout-flow {
 	background-color: #e18e1c;
 	border: 10px solid #e18e1c;
 	border-radius: 4px;
+}
+
+.hero-banner h1 {
+	color: #fff; 
+	font-size: 96px;
+	font-weight: 300;
+	line-height: 1.4;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
