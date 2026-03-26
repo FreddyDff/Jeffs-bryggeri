@@ -535,17 +535,17 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: white;
+	color: black;
 }
 
 a:visited {
-	color: #e8941c;
+	color: black;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #e8941c;
+	color: black;
 }
 
 a:focus {
@@ -1575,3 +1575,8 @@ custom-logo {}
 	color: #e18e1c;
 	font-weight: 600;
 }
+
+a.wp-block-button__link.wp-element-button {
+	color: #e18e1c;
+}
+	
