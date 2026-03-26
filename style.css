@@ -811,11 +811,6 @@ textarea {
 	display: block;
 }
 
-.post,
-.page {
-	margin: 0 0 1.5em;
-}
-
 .updated:not(.published) {
 	display: none;
 }
@@ -1164,7 +1159,7 @@ textarea {
 /* Footer */
 
 .site-footer {
-	background-color: #000;
+	background-color: #0C0C0C;
 	padding: 60px 20px;
 	height: 145px;
 	text-align: center;
