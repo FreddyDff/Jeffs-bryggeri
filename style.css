@@ -535,17 +535,17 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: white;
 }
 
 a:visited {
-	color: #800080;
+	color: #e8941c;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #191970;
+	color: #e8941c;
 }
 
 a:focus {
@@ -1199,10 +1199,9 @@ body {
 
 /* Container */
 .container {
-	max-width: 1200px;
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
-	/* padding: 0 20px; */
+	padding: 20px;
 }
 
 /* ================= HERO ================= */
@@ -1382,9 +1381,9 @@ img.wp-image-151 {
 }
 
 div.wp-block-column.is-layout-flow.wp-block-column-is-layout-flow {
-	content: center;
+	display: flex;
 	justify-content: center;
-
+	align-items: center;
 }
 
 /* Woocommerce */
